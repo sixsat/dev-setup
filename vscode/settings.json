@@ -1,0 +1,57 @@
+{
+  "[sql]": {
+    "editor.defaultFormatter": "inferrinizzard.prettier-sql-vscode"
+  },
+  "[html][css][javascript][typescript][json][jsonc][javascriptreact][typescriptreact][vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2
+  },
+  //
+  "diffEditor.codeLens": true,
+  //
+  "editor.accessibilitySupport": "off",
+  "editor.detectIndentation": true,
+  "editor.dragAndDrop": false,
+  "editor.formatOnSave": true,
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.minimap.enabled": false,
+  "editor.quickSuggestions": {
+    "other": "on",
+    "comments": "off",
+    "strings": "on"
+  },
+  "editor.wordWrap": "on",
+  "extensions.ignoreRecommendations": true,
+  //
+  "git.openRepositoryInParentFolders": "never",
+  "github.copilot.enable": {
+    "*": false,
+    "plaintext": false,
+    "markdown": false,
+    "scminput": false
+  },
+  "go.inlayHints.parameterNames": true,
+  "go-struct-tag.customTags": {
+    "validate": {
+      "cases": [],
+      "options": ["required"]
+    }
+  },
+  "go.toolsManagement.autoUpdate": true,
+  //
+  "Prettier-SQL.keywordCase": "upper",
+  "Prettier-SQL.SQLFlavourOverride": "postgresql",
+  "python.analysis.typeCheckingMode": "basic",
+  //
+  "telemetry.telemetryLevel": "crash",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.env.osx": {
+    "Q_NEW_SESSION": "1"
+  },
+  "terminal.integrated.fontFamily": "MesloLGS NF",
+  "terminal.integrated.fontSize": 13,
+  //
+  "window.openFoldersInNewWindow": "on",
+  "workbench.iconTheme": "material-icon-theme",
+  "workbench.startupEditor": "none"
+}

@@ -1,0 +1,31 @@
+[
+  // maximize terminal panel
+  {
+    "key": "alt+\\",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus || activePanel == 'workbench.panel.output' || activePanel == 'workbench.panel.repl'"
+  },
+  // insert `if err != nil` code snippet
+  {
+    "key": "ctrl+e",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "if err != nil {\n\treturn $1\n}"
+    }
+  },
+  // open lazygit in editor terminal
+  {
+    "key": "cmd+shift+g",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.createTerminalEditor",
+        {
+          "command": "workbench.action.terminal.sendSequence",
+          "args": { "text": "lazygit && exit\n" }
+        }
+      ]
+    }
+  }
+]
