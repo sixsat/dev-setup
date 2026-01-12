@@ -1,0 +1,90 @@
+{
+  "global": { "show_in_menu_bar": false },
+  "profiles": [
+    {
+      "complex_modifications": {
+        "rules": [
+          {
+            "manipulators": [
+              {
+                "description": "Change caps_lock to cmd+ctrl+opt+shift (long press) or esc (short press)",
+                "from": {
+                  "key_code": "caps_lock",
+                  "modifiers": {}
+                },
+                "parameters": {
+                  "basic.to_if_held_down_threshold_milliseconds": 70
+                },
+                "to_if_alone": [{ "key_code": "escape" }],
+                "to_if_held_down": [
+                  {
+                    "key_code": "left_shift",
+                    "modifiers": ["left_command", "left_control", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              },
+              {
+                "description": "Change input source using super+space",
+                "from": {
+                  "key_code": "spacebar",
+                  "modifiers": {
+                    "mandatory": [
+                      "left_command",
+                      "left_control",
+                      "left_option",
+                      "left_shift"
+                    ]
+                  }
+                },
+                "to": [
+                  {
+                    "key_code": "spacebar",
+                    "modifiers": ["left_control", "left_option"]
+                  }
+                ],
+                "type": "basic"
+              }
+            ]
+          }
+        ]
+      },
+      "devices": [
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 9248,
+            "vendor_id": 9639
+          },
+          "simple_modifications": [
+            {
+              "from": { "key_code": "right_command" },
+              "to": [{ "key_code": "right_option" }]
+            },
+            {
+              "from": { "key_code": "right_option" },
+              "to": [{ "key_code": "right_control" }]
+            }
+          ]
+        },
+        {
+          "identifiers": {
+            "is_keyboard": true,
+            "product_id": 50495,
+            "vendor_id": 1133
+          },
+          "ignore": true
+        }
+      ],
+      "fn_function_keys": [
+        {
+          "from": { "key_code": "f6" },
+          "to": [{ "apple_vendor_keyboard_key_code": "launchpad" }]
+        }
+      ],
+      "name": "Default profile",
+      "selected": true,
+      "virtual_hid_keyboard": { "keyboard_type_v2": "ansi" }
+    }
+  ]
+}
