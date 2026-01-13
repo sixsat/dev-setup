@@ -19,6 +19,7 @@ open the terminal and run:
 │   ├── .config
 │   │   └── karabiner
 │   │       └── karabiner.json
+│   ├── .gitconfig
 │   ├── .p10k.zsh
 │   └── .zshrc
 ├── ghostty

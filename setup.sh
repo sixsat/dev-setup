@@ -2,6 +2,7 @@
 
 if ! command -v brew &> /dev/null; then
     echo "🍺 Installing Homebrew..."
+    # This will prompt for `sudo` password and install Xcode CLI tools before installing Homebrew
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
     # Add Homebrew to PATH
@@ -10,12 +11,12 @@ if ! command -v brew &> /dev/null; then
 fi
 
 brew update
-brew install git
 
 GIT_REPO="https://github.com/sixsat/dev-setup.git"
 TARGET_DIR="$HOME/Documents/personal/dev-setup"
 if [ ! -d "$TARGET_DIR" ]; then
     echo "📥 Cloning repo..."
+    # Git should be installed with Xcode CLI tools
     git clone "$GIT_REPO" "$TARGET_DIR"
 else
     echo "📂 Repo already exist. Updating..."
