@@ -1,6 +1,3 @@
-# Taps
-tap "homebrew/bundle"
-
 # CLI Tools (Formulae)
 brew "awscli"
 brew "bat"
@@ -20,6 +17,7 @@ brew "tree"
 brew "zsh-syntax-highlighting"
 
 # GUI Apps and Binaries (Casks)
+cask "android-platform-tools"
 cask "discord"
 cask "docker-desktop"
 cask "font-meslo-for-powerlevel10k"
@@ -36,7 +34,6 @@ cask "visual-studio-code"
 
 # VSCode Extensions
 vscode "albert.tabout"
-vscode "amazonwebservices.codewhisperer-for-command-line-companion"
 vscode "antfu.iconify"
 vscode "bierner.markdown-mermaid"
 vscode "bradlc.vscode-tailwindcss"
