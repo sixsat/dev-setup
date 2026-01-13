@@ -27,8 +27,8 @@ else
     git -C "$TARGET_DIR" pull
 fi
 
-# ⌛️ This step might take some time to run and may require additional `sudo` password
 echo "📦 Installing packages from Brewfile..."
+echo "⌛️ This step might take some time to run and may require additional sudo password"
 if [ -f "$TARGET_DIR/Brewfile" ]; then
     brew bundle --file="$TARGET_DIR/Brewfile"
 fi
