@@ -23,6 +23,7 @@ brew "zsh-syntax-highlighting"
 # GUI Apps and Binaries (Casks)
 cask "discord"
 cask "docker-desktop"
+cask "font-meslo-for-powerlevel10k"
 cask "ghostty"
 cask "google-chrome"
 cask "karabiner-elements"

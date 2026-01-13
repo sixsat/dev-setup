@@ -27,17 +27,6 @@ if [ -f "$TARGET_DIR/Brewfile" ]; then
     brew bundle --file="$TARGET_DIR/Brewfile"
 fi
 
-echo "🔡 Installing MesloLGS NF fonts..."
-FONT_DIR="$HOME/Library/Fonts"
-FONT_BASE_URL="https://github.com/romkatv/powerlevel10k-media/raw/master"
-fonts=("MesloLGS%20NF%20Regular.ttf" "MesloLGS%20NF%20Bold.ttf" "MesloLGS%20NF%20Italic.ttf" "MesloLGS%20NF%20Bold%20Italic.ttf")
-for font in "${fonts[@]}"; do
-    font_filename="${font//%20/ }" # Replaces %20 with space
-    if [ ! -f "$FONT_DIR/$font_filename" ]; then
-        curl -L "$FONT_BASE_URL/$font" -o "$FONT_DIR/$font_filename"
-    fi
-done
-
 if [ ! -d "$HOME/.oh-my-zsh" ]; then
     echo "🪄 Installing Oh My Zsh..."
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
