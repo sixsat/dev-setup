@@ -61,5 +61,6 @@ mkdir -p "$GHOSTTY_CFG_DIR"
 cp -f "$TARGET_DIR/ghostty/config" "$GHOSTTY_CFG_DIR/config"
 
 echo "✅ Setup Complete"
-echo "Run: source ~/.zshrc"
+echo "Run: source ~/.zshrc in ghostty"
 echo "⚠️ If got exit code 1, try run kiro-cli doctor and fix the issue until you get ✔ Everything looks good"
+echo "also open kiro-cli setting to set it up."
