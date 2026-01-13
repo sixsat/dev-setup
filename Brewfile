@@ -1,5 +1,6 @@
 # Taps
 tap "homebrew/bundle"
+tap "oven-sh/bun"
 
 # CLI Tools (Formulae)
 brew "awscli"
