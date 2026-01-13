@@ -21,6 +21,7 @@ open the terminal and run:
 │   │       └── karabiner.json
 │   ├── .gitconfig
 │   ├── .p10k.zsh
+│   ├── .zprofile
 │   └── .zshrc
 ├── ghostty
 │   └── config

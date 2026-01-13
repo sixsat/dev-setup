@@ -27,6 +27,7 @@ else
     git -C "$TARGET_DIR" pull
 fi
 
+# ⌛️ This step might take some time to run and may require additional `sudo` password
 echo "📦 Installing packages from Brewfile..."
 if [ -f "$TARGET_DIR/Brewfile" ]; then
     brew bundle --file="$TARGET_DIR/Brewfile"
@@ -49,6 +50,7 @@ VSCODE_USER_DIR="$HOME/Library/Application Support/Code/User"
 GHOSTTY_CFG_DIR="$HOME/Library/Application Support/com.mitchellh.ghostty"
 cp -f "$TARGET_DIR/dotfiles/.gitconfig" "$HOME/.gitconfig"
 cp -f "$TARGET_DIR/dotfiles/.zshrc" "$HOME/.zshrc"
+cp -f "$TARGET_DIR/dotfiles/.zprofile" "$HOME/.zprofile"
 cp -f "$TARGET_DIR/dotfiles/.p10k.zsh" "$HOME/.p10k.zsh"
 mkdir -p "$KARABINER_CFG_DIR"
 cp -f "$TARGET_DIR/dotfiles/.config/karabiner/karabiner.json" "$KARABINER_CFG_DIR/karabiner.json"
@@ -58,5 +60,6 @@ cp -f "$TARGET_DIR/vscode/keybindings.json" "$VSCODE_USER_DIR/keybindings.json"
 mkdir -p "$GHOSTTY_CFG_DIR"
 cp -f "$TARGET_DIR/ghostty/config" "$GHOSTTY_CFG_DIR/config"
 
-echo "✅ Setup Complete!"
+echo "✅ Setup Complete"
 echo "Run: source ~/.zshrc"
+echo "⚠️ If got exit code 1, try run kiro-cli doctor and fix the issue until you get ✔ Everything looks good"
