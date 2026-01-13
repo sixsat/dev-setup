@@ -12,6 +12,10 @@ fi
 
 brew update
 
+# Installing bun via Brewfile doesn't work
+brew tap oven-sh/bun
+brew install bun
+
 GIT_REPO="https://github.com/sixsat/dev-setup.git"
 TARGET_DIR="$HOME/Documents/personal/dev-setup"
 if [ ! -d "$TARGET_DIR" ]; then

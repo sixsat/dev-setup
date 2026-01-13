@@ -1,11 +1,9 @@
 # Taps
 tap "homebrew/bundle"
-tap "oven-sh/bun"
 
 # CLI Tools (Formulae)
 brew "awscli"
 brew "bat"
-brew "bun"
 brew "fd"
 brew "ffmpeg"
 brew "fzf"
