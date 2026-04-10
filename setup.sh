@@ -12,10 +12,6 @@ fi
 
 brew update
 
-# Installing bun via Brewfile doesn't work
-brew tap oven-sh/bun
-brew install bun
-
 GIT_REPO="https://github.com/sixsat/dev-setup.git"
 TARGET_DIR="$HOME/Documents/personal/dev-setup"
 if [ ! -d "$TARGET_DIR" ]; then
@@ -48,6 +44,8 @@ echo "⚙️ Copying configurations..."
 KARABINER_CFG_DIR="$HOME/.config/karabiner"
 VSCODE_USER_DIR="$HOME/Library/Application Support/Code/User"
 GHOSTTY_CFG_DIR="$HOME/Library/Application Support/com.mitchellh.ghostty"
+LAZYGIT_CFG_DIR="$HOME/Library/Application Support/lazygit"
+
 cp -f "$TARGET_DIR/dotfiles/.gitconfig" "$HOME/.gitconfig"
 cp -f "$TARGET_DIR/dotfiles/.zshrc" "$HOME/.zshrc"
 cp -f "$TARGET_DIR/dotfiles/.zprofile" "$HOME/.zprofile"
@@ -59,6 +57,8 @@ cp -f "$TARGET_DIR/vscode/settings.json" "$VSCODE_USER_DIR/settings.json"
 cp -f "$TARGET_DIR/vscode/keybindings.json" "$VSCODE_USER_DIR/keybindings.json"
 mkdir -p "$GHOSTTY_CFG_DIR"
 cp -f "$TARGET_DIR/ghostty/config" "$GHOSTTY_CFG_DIR/config"
+mkdir -p "$LAZYGIT_CFG_DIR"
+cp -f "$TARGET_DIR/lazygit/config.yml" "$LAZYGIT_CFG_DIR/config.yml"
 
 echo "✅ Setup Complete"
 echo "Run: source ~/.zshrc in ghostty"

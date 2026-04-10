@@ -25,6 +25,8 @@ open the terminal and run:
 │   └── .zshrc
 ├── ghostty
 │   └── config
+├── lazygit
+│   └── config.yml
 ├── setup.sh
 └── vscode
     ├── keybindings.json
