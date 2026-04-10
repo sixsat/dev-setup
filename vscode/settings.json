@@ -24,12 +24,6 @@
   "extensions.ignoreRecommendations": true,
   //
   "git.openRepositoryInParentFolders": "never",
-  "github.copilot.enable": {
-    "*": false,
-    "plaintext": false,
-    "markdown": false,
-    "scminput": false
-  },
   "go.inlayHints.parameterNames": true,
   "go-struct-tag.customTags": {
     "validate": {
@@ -50,6 +44,8 @@
   },
   "terminal.integrated.fontFamily": "MesloLGS NF",
   "terminal.integrated.fontSize": 13,
+  //
+  "update.showReleaseNotes": false,
   //
   "window.openFoldersInNewWindow": "on",
   "workbench.iconTheme": "material-icon-theme",
